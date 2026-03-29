@@ -53,3 +53,12 @@ if __name__ == "__main__":
 
     print(f"\n{greet('MCA Students')}")
     print(f"\nSample Attendance: {calculate_attendance(18, 20)}%")
+
+
+def search_student(students: list, query: str) -> list:
+    """Search for students by name."""
+    results = []
+    for s in students:
+        if query.lower() in s["name"].lower():
+            results.append(s)
+    return results
